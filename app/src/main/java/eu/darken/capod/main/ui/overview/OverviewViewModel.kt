@@ -184,8 +184,8 @@ class OverviewViewModel @Inject constructor(
         }
 
         val visibleProfiledDevices: List<PodDevice>
-            get() = if (upgradeInfo.isPro) profiledDevices else profiledDevices.take(FREE_DEVICE_LIMIT)
-        val hiddenProfiledDeviceCount: Int get() = profiledDevices.size - visibleProfiledDevices.size
+            get() = profiledDevices
+        val hiddenProfiledDeviceCount: Int get() = 0
         val unmatchedDevices: List<PodDevice> get() = devices.filter { it.profileId == null }
 
         val bluetoothIconState: BluetoothIconState

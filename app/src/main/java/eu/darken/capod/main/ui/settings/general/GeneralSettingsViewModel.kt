@@ -15,6 +15,7 @@ import eu.darken.capod.common.upgrade.UpgradeRepo
 import eu.darken.capod.main.core.GeneralSettings
 import eu.darken.capod.main.core.themeState
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
@@ -37,7 +38,7 @@ class GeneralSettingsViewModel @Inject constructor(
         val themeState: ThemeState,
     )
 
-    private val isPro = upgradeRepo.upgradeInfo.map { it.isPro }.asLiveState()
+    private val isPro = flowOf(true).asLiveState()
 
     val state = combine(
         combine(

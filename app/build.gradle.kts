@@ -49,7 +49,7 @@ android {
     productFlavors {
         create("foss") {
             dimension = "version"
-            signingConfig = signingConfigs["releaseFoss"]
+            signingConfig = signingConfigs.getByName("debug")
             // The info block is encrypted and can only be read by google
             dependenciesInfo {
                 includeInApk = false

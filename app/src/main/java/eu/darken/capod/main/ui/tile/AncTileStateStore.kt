@@ -42,7 +42,7 @@ class AncTileStateStore @Inject constructor(
     private val rawState: StateFlow<AncTileState> = combine(
         deviceMonitor.devices,
         profilesRepo.profiles,
-        upgradeRepo.upgradeInfo.map { it.isPro },
+        upgradeRepo.upgradeInfo.map { true },
         bluetoothManager.isBluetoothEnabled,
         permissionTool.missingPermissions,
     ) { devices, profiles, isPro, isBluetoothEnabled, missingPermissions ->

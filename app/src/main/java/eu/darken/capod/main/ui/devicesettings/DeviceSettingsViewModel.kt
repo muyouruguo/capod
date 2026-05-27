@@ -147,7 +147,7 @@ class DeviceSettingsViewModel @Inject constructor(
             State(
                 device = device,
                 now = timeSource.now(),
-                isPro = upgrade.isPro,
+                isPro = true,
                 isNudgeAvailable = nudgeAvailability != NudgeAvailability.BROKEN,
                 isForceConnecting = forcing,
                 isClassicallyConnected = device?.address?.let { it in connectedAddresses } == true,

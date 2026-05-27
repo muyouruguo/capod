@@ -68,7 +68,7 @@ class PressControlsViewModel @Inject constructor(
                 device = device,
                 profile = profile,
                 stemActions = stemActions,
-                isPro = upgrade.isPro,
+                isPro = true,
                 isAapReady = device?.isAapReady == true,
                 supportsAncCycle = model?.features?.hasListeningModeCycle == true,
                 supportsAncToggle = model?.features?.hasAncControl == true,

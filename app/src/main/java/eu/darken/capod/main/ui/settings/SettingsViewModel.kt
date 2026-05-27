@@ -23,7 +23,7 @@ class SettingsViewModel @Inject constructor(
     )
 
     val state = upgradeRepo.upgradeInfo
-        .map { State(isPro = it.isPro, sponsorUrl = upgradeRepo.getSponsorUrl()) }
+        .map { State(isPro = true, sponsorUrl = upgradeRepo.getSponsorUrl()) }
         .asLiveState()
 
     fun openUrl(url: String) {
